@@ -135,8 +135,9 @@ devtmpfs         63G     0   63G   0% /dev
 $ mkdir -p /tol/docker-data
 $ cat <<EOF > /etc/docker/daemon.json
 {
-    "graph": "/tol/docker-data"
-    "exec-opts": ["native.cgroupdriver=systemd"]
+    "graph": "/tol/docker-data",
+    "exec-opts": ["native.cgroupdriver=systemd"],
+    "registry-mirrors": ["https://rl4dfj46.mirror.aliyuncs.com"]
 }
 EOF
 
